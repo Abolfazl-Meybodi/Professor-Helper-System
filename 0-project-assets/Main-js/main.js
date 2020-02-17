@@ -465,6 +465,7 @@ $("#btncreator-4").click(function () {
 
 let xhttp;
 let modify = document.getElementsByTagName('small');
+console.log(modify);
 if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest();
 } else {
