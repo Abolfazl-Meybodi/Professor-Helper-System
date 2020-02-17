@@ -463,17 +463,17 @@ $("#btncreator-4").click(function () {
 // Child.attr('data-target' , '#Attendance');
  // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
 
-let xhttp;
-let modify = document.getElementsById('UpdateCalender');
-console.log(modify);
+var xhttp;
 if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest();
 } else {
     xhttp = new ActiveXObject();
 }
-xhttp.open('GET', 'data.txt', true);
+xhttp.open('GET', 'data.txt');
 xhttp.onreadystatechange = function () {
     if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
+        var modify = document.getElementsById('UpdateCalender');
         modify.innerHTML = xhttp.responseText;
         }   
     }
+xhttp.send();
