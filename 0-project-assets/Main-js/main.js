@@ -470,9 +470,9 @@ if (window.XMLHttpRequest) {
     xhttp = new ActiveXObject();
 }
 xhttp.onreadystatechange = function () {
-    if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
-        var modify = document.getElementsById('UpdateCalender');
-        modify.innerHTML = xhttp.responseText;
+    if ((this.readyState === 4) && (this.status === 200)) {
+        document.getElementById("UpdateCalender").innerHTML =
+        this.responseText;
         }   
     }
 xhttp.open("GET", "data.txt", true);
