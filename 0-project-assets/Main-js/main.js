@@ -469,11 +469,11 @@ if (window.XMLHttpRequest) {
 } else {
     xhttp = new ActiveXObject();
 }
-xhttp.open('GET', 'data.txt');
 xhttp.onreadystatechange = function () {
     if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
         var modify = document.getElementsById('UpdateCalender');
         modify.innerHTML = xhttp.responseText;
         }   
     }
+xhttp.open("GET", "data.txt", true);
 xhttp.send();
