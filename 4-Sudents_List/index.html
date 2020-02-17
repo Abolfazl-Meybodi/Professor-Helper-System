@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> لیست دانشجویان </title>
+  <link rel="shortcut icon" href="../0 - project-assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../0 - project-assets/Bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="../0 - project-assets/MainStyles/bootstrap-rtl.css" />
+  <link rel="stylesheet" href="../0 - project-assets/MainStyles/vazir.css" />
+  <link rel="stylesheet" href="../0 - project-assets/MainStyles/Main.css" />
+  <link rel="stylesheet" href="../0 - project-assets/Font-Awesome/css/all.css" />
+</head>
+
+<body class="bg-white">
+  <!----------------------Nav Bar----------------------->
+      <!-- Modal for btn (کلیک کنید) -->
+      <div class="modal fade" id="infobtn">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class=" modal-content bg-white">
+              <div class="modal-header bg-light ">
+                <p class="modal-title mr-auto ">توضیحاتی در ارتباط با پنل استاد یاور</p>
+                <button type="button" class="close mr-auto ml-0" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p> این پنل برای راحتی هر چه بیشتر شما اساتید ارجمند طراحی شده است و سعی شده تا حد امکان پنلی شفاف با دسترسی مشخص و واضح به تمام بخش های مورد نیاز شما باشد.</p>
+                <hr>
+                <p>برای دسترسی به لیست کلاس ها و دانشجویان هر کلاس از منوی عمودی سمت راست بر روی دکمه ی لیست کلاس ها کلیک کنید.</p>
+                <hr>
+                <p>برای مشاهده ی تمام دانشجویان خود بر روی دکمه ی لیست دانشجویان کلیک نمایید.</p>
+                <hr>
+                <p>برای انجام حضور و غیاب ابتدا بر روی دکمه ی بخش حضور غیاب کلیک نمایید سپس از بین لیست کلاس های خود یکی را انتخاب نموده و پس از انتخاب جلسه ی مورد نظر وارد بخش حضور و غیاب خواهید شد.</p>
+              </div>
+              <div class="modal-footer">
+                <button class=" btn btn-primary" data-dismiss="modal" > بسیار خب </button>
+              </div>
+            </div>
+          </div>
+        </div>
+  <nav class="navbar navbar-expand-md navbar-light p-0 border-bottom sticky-top bg-light ">
+    <div class="d-flex align-items-center">
+      <figure class="figure pt-2 mb-0 px-sm-5 mx-1 mx-sm-0 border-left ">
+        <img src="../0 - project-assets/images/logo.png" />
+        <figcaption class="figure-caption pr-4 font-weight-bold text-dark">
+          دانشگاه خیام
+        </figcaption>
+      </figure>
+      <span class="fas fa-bars mr-2 mr-sm-5 h3 mb-0" data-toggle="collapse" data-target="#sidebar"></span>
+    </div>
+    <div class=" collapse navbar-collapse">
+      <button type="button" class="btn btn-success mr-md-1 mr-lg-4 mr-xl-5 ">
+        شناسه : <span class="badge badge-light">9315412066</span>
+      </button>
+      <button type="button" class="btn btn-success mr-md-1 mr-lg-4 mr-xl-5">
+        سال تحصیلی <span class="badge badge-light">1398-1399</span>
+      </button>
+      <button type="button" class="btn btn-success mx-md-1 mr-lg-4 mr-xl-5">
+        نیم سال <span class="badge badge-light">اول</span>
+      </button>
+      <div class=" ml-3 mr-auto">
+        <button type="button" class="btn btn-danger ">
+          پیام ها <span class="badge bg-white text-danger">4</span>
+        </button>
+      </div>
+    </div>
+    <div class="d-none d-sm-block d-md-none">
+      <button type="button" class="btn btn-success mr-md-1 mr-lg-4 mr-xl-5 ">
+        شناسه : <span class="badge badge-light">9315412066</span>
+      </button>
+      <button type="button" class="btn btn-info">
+        پیام ها <span class="badge badge-light">4</span>
+      </button>
+    </div>
+    <div class="d-block d-sm-none flex-column d-flex" id="containerbtnXs">
+      <button type="button" class="btn btn-success my-1 px-0" id="btnXs">
+        شناسه : <span class="badge badge-light">9315412066</span>
+      </button>
+      <button type="button" class="btn btn-info my-1 px-0" id="btnXs">
+        پیام ها <span class="badge badge-light">4</span>
+      </button>
+    </div>
+  </nav>
+
+  <!----------------------End Nav Bar----------------------->
+
+  <div class=" container-fluid">
+    <div class="row">
+      <!----------------------Side Bar----------------------->
+
+      <div class=" border-left col-12 col-md-2 bg-light collapse show " id="sidebar">
+          <a href="../2 - Project_Index/index.html" class="text-decoration-none" >
+            <div
+              class="btn btn-secondary px-0 mt-3 mb-2 w-100 font-weight-bold rounded-0 bg-light text-dark border-0 active">
+              پرتال استاد یاور
+            </div>
+          </a>  
+        <div class="btn btn-info px-0 my-2 w-100" data-target="#infobtn" data-toggle="modal" >
+          کلیک کنید
+        </div>
+        <a href="../3 - Classes_List/index.html" class="text-decoration-none" >
+        <div class="btn btn-secondary px-0 my-2 w-100">
+          لیست کلاس ها
+        </div>
+        </a>
+        <a href="../4- Sudents_List/index.html" class="text-decoration-none" >
+        <div class="btn btn-secondary px-0 my-2 w-100" id="shadow" >
+          لیست دانشجویان
+        </div>
+        </a>
+        <a href="../5 - Index to Attendance System/index.html" class="text-decoration-none" >
+        <div class="btn btn-secondary px-0 my-2 w-100">
+          بخش حضور غیاب
+        </div>
+        </a>
+        <a href="../1 - Login_Form/index.html" class="text-decoration-none" >
+        <div class="btn btn-danger px-0 my-2 w-100">
+          خروج
+        </div>
+      </a>
+        <div class=" mt-5 d-none d-lg-block text-muted w-100 text-center ">
+        </div>
+      </div>
+
+
+      <!----------------------End Side Bar----------------------->
+
+      <!----------------------Main from Xlarge to Small----------------------->
+
+      <div class=" col-12 col-md-10 px-0 px-md-3 bg-white py-2 mr-md-auto d-none d-sm-block " id="main">
+        <div class=" container-fluid ">
+          <div class=" row ">
+            <div class="mt-2 mr-1 w-100" id="arrowcollapsing">
+              <div class=" d-flex border-bottom mb-2 ">
+                <h5 class="fas fa-th-list ml-2 mb-1 "></h5>
+                <p class="mb-1">لیست دانشجویان - نیم سال اول ۱۳۹۸ - ۱۳۹۹</p>
+              </div>
+              <div class="mt-1">
+                <button type="button" class=" btn btn-info " id="classList" data-toggle="modal" data-target="#StudentInfo1">
+                  ابوالفضل علم بردار میبدی
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="StudentInfo1" tabindex="-1" role="dialog"
+                  aria-labelledby="StudentInfoTitle1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered " role="document">
+                    <div class="modal-content">
+                      <div class="modal-header d-flex bg-light align-items-center ">
+                        <h5 class="modal-title" id="StudentInfo1">
+                          ابوالفضل علم بردار میبدی
+                        </h5>
+                        <button type="button" class="close ml-1 " data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body d-flex ">
+                        <img class="img-fluid col-6 p-0" src="../0 - project-assets/images/avatar-student.jpg" alt="StudentInfo">
+                        <div class="col-6" >
+                          <p>
+                            9315412066
+                          </p>
+                          <p>
+                            تعداد غیبت ها : 6
+                          </p>
+                          <p>
+                            وضعیت : حذف غیبت
+                          </p>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">
+                          بسیار خب
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-1">
+                  <button type="button" class=" btn btn-info " id="classList" data-toggle="modal" data-target="#StudentInfo2">
+                     رضا یزدی 
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="StudentInfo2" tabindex="-1" role="dialog"
+                    aria-labelledby="StudentInfoTitle2" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered " role="document">
+                      <div class="modal-content">
+                        <div class="modal-header d-flex bg-light align-items-center ">
+                          <h5 class="modal-title" id="StudentInfo2">
+                             رضا یزدی
+                          </h5>
+                          <button type="button" class="close ml-1 " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body d-flex ">
+                          <img class="img-fluid col-6 p-0" src="../0 - project-assets/images/avatar-student.jpg" alt="StudentInfo">
+                          <div class="col-6" >
+                            <p>
+                              9315412067
+                            </p>
+                            <p>
+                              تعداد غیبت ها : 3
+                            </p>
+                            <p>
+                              وضعیت : عادی
+                            </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">
+                            بسیار خب
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="mt-1">
+                  <button type="button" class=" btn btn-info " id="classList" data-toggle="modal" data-target="#StudentInfo3">
+                    سید سعید طباطبایی
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="StudentInfo3" tabindex="-1" role="dialog"
+                    aria-labelledby="StudentInfoTitle3" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered " role="document">
+                      <div class="modal-content">
+                        <div class="modal-header d-flex bg-light align-items-center ">
+                          <h5 class="modal-title" id="StudentInfo3">
+                            سید سعید طباطبایی
+                          </h5>
+                          <button type="button" class="close ml-1 " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body d-flex ">
+                          <img class="img-fluid col-6 p-0" src="../0 - project-assets/images/avatar-student.jpg" alt="StudentInfo">
+                          <div class="col-6" >
+                            <p>
+                              9315412068
+                            </p>
+                            <p>
+                              تعداد غیبت ها : 1
+                            </p>
+                            <p>
+                              وضعیت : عادی 
+                            </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">
+                            بسیار خب
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="mt-1">
+                  <button type="button" class=" btn btn-info " id="classList" data-toggle="modal" data-target="#StudentInfo4">
+                     امیر حسین شکری
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="StudentInfo4" tabindex="-1" role="dialog"
+                    aria-labelledby="StudentInfoTitle4" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered " role="document">
+                      <div class="modal-content">
+                        <div class="modal-header d-flex bg-light align-items-center ">
+                          <h5 class="modal-title" id="StudentInfo4">
+                            امیر حسین شکری
+                          </h5>
+                          <button type="button" class="close ml-1 " data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body d-flex ">
+                          <img class="img-fluid col-6 p-0" src="../0 - project-assets/images/avatar-student.jpg" alt="StudentInfo">
+                          <div class="col-6" >
+                            <p>
+                              9315412069
+                            </p>
+                            <p>
+                              تعداد غیبت ها : 6
+                            </p>
+                            <p>
+                              وضعیت : حذف غیبت
+                            </p>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal">
+                            بسیار خب
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------End Main from Small to Xs----------------------->
+
+      <!----------------------Main Just fro Xs----------------------->
+
+      <div class=" col-12 col-md-10 px-0 px-md-3 bg-white py-2 mr-md-auto d-block d-sm-none " id="main">
+        <div class=" container-fluid ">
+          <div class=" row ">
+            <div class="mt-2 mr-1 w-100">
+              <div class=" d-flex border-bottom mb-2 ">
+                <h5 class="fas fa-th-list ml-2 mb-1 "></h5>
+                <p class="mb-1">لیست کلاس ها - نیم سال اول ۱۳۹۸ - ۱۳۹۹</p>
+              </div>
+              <div class="mt-1">
+                <button class="btn btn-info " type="button" data-toggle="collapse" data-target="#firstLesson-Xs"
+                  id="classList">
+                  کارگاه برنامه نویسی پیشرفته
+                </button>
+                <div class="collapse" id="firstLesson-Xs">
+                  <div class=" table-responsive text-center mt-1 ">
+                    <table class="table table-bordered table-striped ">
+                      <thead>
+                        <tr class="table-light">
+                          <th>نام</th>
+                          <th>نام خانوادگی</th>
+                          <th>شماره دانشجویی</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ابوالفضل</td>
+                          <td>علم بردار میبدی</td>
+                          <td>9315412066</td>
+                        </tr>
+                        <tr>
+                          <td>امیرحسین</td>
+                          <td>شکری</td>
+                          <td>9314512067</td>
+                        </tr>
+                        <tr>
+                          <td>رضا</td>
+                          <td>یزدی</td>
+                          <td>9315412068</td>
+                        </tr>
+                        <tr>
+                          <td>سعید</td>
+                          <td>طباطبایی</td>
+                          <td>9315412069</td>
+                        </tr>
+                        <tr>
+                          <td>شایان</td>
+                          <td>شفیقی شهری</td>
+                          <td>9315412070</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-1">
+                <button class="btn btn-info " type="button" data-toggle="collapse" data-target="#SecondLesson-Xs"
+                  id="classList">
+                  مباحث ویژه
+                </button>
+                <div class="collapse" id="SecondLesson-Xs">
+                  <div class=" table-responsive text-center mt-1 ">
+                    <table class="table table-bordered table-striped ">
+                      <thead>
+                        <tr class="table-light">
+                          <th>نام</th>
+                          <th>نام خانوادگی</th>
+                          <th>شماره دانشجویی</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ابوالفضل</td>
+                          <td>علم بردار میبدی</td>
+                          <td>9315412066</td>
+                        </tr>
+                        <tr>
+                          <td>امیرحسین</td>
+                          <td>شکری</td>
+                          <td>9314512067</td>
+                        </tr>
+                        <tr>
+                          <td>رضا</td>
+                          <td>یزدی</td>
+                          <td>9315412068</td>
+                        </tr>
+                        <tr>
+                          <td>سعید</td>
+                          <td>طباطبایی</td>
+                          <td>9315412069</td>
+                        </tr>
+                        <tr>
+                          <td>شایان</td>
+                          <td>شفیقی شهری</td>
+                          <td>9315412070</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-1">
+                <button class="btn btn-info " type="button" data-toggle="collapse" data-target="#ThirdLesson-Xs"
+                  id="classList">
+                  ساختمان داده ها
+                </button>
+                <div class="collapse" id="ThirdLesson-Xs">
+                  <div class=" table-responsive text-center mt-1 ">
+                    <table class="table table-bordered table-striped ">
+                      <thead>
+                        <tr class="table-light">
+                          <th>نام</th>
+                          <th>نام خانوادگی</th>
+                          <th>شماره دانشجویی</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ابوالفضل</td>
+                          <td>علم بردار میبدی</td>
+                          <td>9315412066</td>
+                        </tr>
+                        <tr>
+                          <td>امیرحسین</td>
+                          <td>شکری</td>
+                          <td>9314512067</td>
+                        </tr>
+                        <tr>
+                          <td>رضا</td>
+                          <td>یزدی</td>
+                          <td>9315412068</td>
+                        </tr>
+                        <tr>
+                          <td>سعید</td>
+                          <td>طباطبایی</td>
+                          <td>9315412069</td>
+                        </tr>
+                        <tr>
+                          <td>شایان</td>
+                          <td>شفیقی شهری</td>
+                          <td>9315412070</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-1">
+                <button class="btn btn-info " type="button" data-toggle="collapse" data-target="#fourthLesson-Xs"
+                  id="classList">
+                  برنامه سازی پیشرفته
+                </button>
+                <div class="collapse" id="fourthLesson-Xs">
+                  <div class=" table-responsive text-center mt-1 ">
+                    <table class="table table-bordered table-striped ">
+                      <thead>
+                        <tr class="table-light">
+                          <th>نام</th>
+                          <th>نام خانوادگی</th>
+                          <th>شماره دانشجویی</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>ابوالفضل</td>
+                          <td>علم بردار میبدی</td>
+                          <td>9315412066</td>
+                        </tr>
+                        <tr>
+                          <td>امیرحسین</td>
+                          <td>شکری</td>
+                          <td>9314512067</td>
+                        </tr>
+                        <tr>
+                          <td>رضا</td>
+                          <td>یزدی</td>
+                          <td>9315412068</td>
+                        </tr>
+                        <tr>
+                          <td>سعید</td>
+                          <td>طباطبایی</td>
+                          <td>9315412069</td>
+                        </tr>
+                        <tr>
+                          <td>شایان</td>
+                          <td>شفیقی شهری</td>
+                          <td>9315412070</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------End Main Just fro Xs----------------------->
+    </div>
+  </div>
+  <script src="../0 - project-assets/jQuery/jquery-3.4.1.js"></script>
+  <script src="../0 - project-assets/Bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="../0 - project-assets/Main-js/main.js"></script>
+</body>
+
+</html>
