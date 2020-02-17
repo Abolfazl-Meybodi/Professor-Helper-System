@@ -462,3 +462,19 @@ $("#btncreator-4").click(function () {
 // Child.attr('data-toggle' , 'modal');
 // Child.attr('data-target' , '#Attendance');
  // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
+
+let xhttp;
+if (window.XMLHttpRequest) {
+    xhttp = new XMLHttpRequest();
+} else {
+    xhttp = new ActiveXObject();
+}
+xhttp.open('GET', 'data.txt', true);
+xhttp.onreadystatechange = function () {
+    if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
+        let modify = document.getElementsByTagName('small');
+        for (let index = 0; index < 36; index++) {
+            modify[index].innerHTML = xhttp.responseText;
+        }   
+    }    
+}
