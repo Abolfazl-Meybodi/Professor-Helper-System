@@ -464,6 +464,7 @@ $("#btncreator-4").click(function () {
  // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
 
 let xhttp;
+let modify = document.getElementsByTagName('small');
 if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest();
 } else {
@@ -472,7 +473,6 @@ if (window.XMLHttpRequest) {
 xhttp.open('GET', 'data.txt', true);
 xhttp.onreadystatechange = function () {
     if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
-        let modify = document.getElementsByTagName('small');
         for (let index = 0; index < 36; index++) {
             modify[index].innerHTML = xhttp.responseText;
         }   
