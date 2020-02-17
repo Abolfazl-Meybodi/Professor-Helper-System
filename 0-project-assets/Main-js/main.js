@@ -474,6 +474,6 @@ if (window.XMLHttpRequest) {
 xhttp.open('GET', 'data.txt', true);
 xhttp.onreadystatechange = function () {
     if ((xhttp.readyState === 4) && (xhttp.status === 200)) {
-        modify = xhttp.responseText;
+        modify.innerHTML = xhttp.responseText;
         }   
     }
