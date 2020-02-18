@@ -465,6 +465,7 @@ $("#btncreator-4").click(function () {
 
 
 var xhttp;
+modify = [[], [], [], [], [], []]
 if (window.XMLHttpRequest) {
     xhttp = new XMLHttpRequest();
 } else {
@@ -473,20 +474,23 @@ if (window.XMLHttpRequest) {
 xhttp.open("GET", "data.json");
 xhttp.onreadystatechange = function() {
   if (xhttp.readyState == 4 && xhttp.status == 200) {
-    var modify = document.getElementById("divCalendar").getElementsByTagName("small");
-    var items = JSON.parse(xhttp.responseText);
+    modify[0] = document.getElementsByClassName("Sat"); 
+    modify[1] = document.getElementsByClassName("Sun"); 
+    modify[2] = document.getElementsByClassName("Mon"); 
+    modify[3] = document.getElementsByClassName("Tus"); 
+    modify[4] = document.getElementsByClassName("Wed"); 
+    modify[5] = document.getElementsByClassName("Thurs"); 
     console.log(modify);
+    var items = JSON.parse(xhttp.responseText);
     console.log(items);
-    for(var i = 0; i < 6; i++) {
-        for(var i = 0; i < 6; i++) {
-            modify[0].innerHTML = items[0].firstTime;
-            modify[1].innerHTML = items[0].firstTime;
-            modify[2].innerHTML = items[0].firstTime;
-            modify[3].innerHTML = items[0].firstTime;
-            modify[4].innerHTML = items[0].firstTime;
-            modify[5].innerHTML = items[0].firstTime;
+    for(let i = 0; i < 6; i++) {
+            modify[i][0].innerHTML = items[i].firstTime;
+            modify[i][1].innerHTML = items[i].SecondTime;
+            modify[i][2].innerHTML = items[i].ThirdTime;
+            modify[i][3].innerHTML = items[i].FourthTime;
+            modify[i][4].innerHTML = items[i].FifthTime;
+            modify[i][5].innerHTML = items[i].SixthTime;
         }
-    }
   }
 };
 xhttp.send();
