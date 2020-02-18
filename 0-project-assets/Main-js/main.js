@@ -417,10 +417,10 @@ $(document).ready(function () {
 $("#btncreator-1").click(function () {
     Child = $("<a></a>");
     $("#addnumberClassSession-1").click(function () {
-        $("#SessionContainer-1").append(Child );
-            Child.addClass("btn btn-primary m-2 text-decoration-none ");
-            Child.attr('href' , '../6 -  Attendance System/index.html');
-            Child.text(" جلسه " + $("#numberClassSession-1").val());
+        $("#SessionContainer-1").append(Child);
+        Child.addClass("btn btn-primary m-2 text-decoration-none ");
+        Child.attr('href', '../6-Attendance System/index.html');
+        Child.text(" جلسه " + $("#numberClassSession-1").val());
 
     });
 });
@@ -430,7 +430,7 @@ $("#btncreator-2").click(function () {
     $("#addnumberClassSession-2").click(function () {
         $("#SessionContainer-2").append(Child);
         Child.addClass("btn btn-primary m-2 text-decoration-none ");
-        Child.attr('href' , '../6 -  Attendance System/index.html');
+        Child.attr('href', '../6-Attendance System/index.html');
         Child.text(" جلسه " + $("#numberClassSession-2").val());
         // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
     });
@@ -441,7 +441,7 @@ $("#btncreator-3").click(function () {
     $("#addnumberClassSession-3").click(function () {
         $("#SessionContainer-3").append(Child);
         Child.addClass("btn btn-primary m-2 text-decoration-none ");
-        Child.attr('href' , '../6 -  Attendance System/index.html');
+        Child.attr('href', '../6-Attendance System/index.html');
         Child.text(" جلسه " + $("#numberClassSession-3").val());
         // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
     });
@@ -452,7 +452,7 @@ $("#btncreator-4").click(function () {
     $("#addnumberClassSession-4").click(function () {
         $("#SessionContainer-4").append(Child);
         Child.addClass("btn btn-primary m-2 text-decoration-none ");
-        Child.attr('href' , '../6 -  Attendance System/index.html');
+        Child.attr('href', '../6-Attendance System/index.html');
         Child.text(" جلسه " + $("#numberClassSession-4").val());
         // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
     });
@@ -461,7 +461,7 @@ $("#btncreator-4").click(function () {
 
 // Child.attr('data-toggle' , 'modal');
 // Child.attr('data-target' , '#Attendance');
- // $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
+// $("div#SessionContainer button:not(last-of-type)").attr("disabled","disabled");
 
 
 var xhttp;
@@ -472,18 +472,18 @@ if (window.XMLHttpRequest) {
     xhttp = new ActiveXObject();
 }
 xhttp.open("GET", "data.json");
-xhttp.onreadystatechange = function() {
-  if (xhttp.readyState == 4 && xhttp.status == 200) {
-    modify[0] = document.getElementsByClassName("Sat"); 
-    modify[1] = document.getElementsByClassName("Sun"); 
-    modify[2] = document.getElementsByClassName("Mon"); 
-    modify[3] = document.getElementsByClassName("Tus"); 
-    modify[4] = document.getElementsByClassName("Wed"); 
-    modify[5] = document.getElementsByClassName("Thurs"); 
-    console.log(modify);
-    var items = JSON.parse(xhttp.responseText);
-    console.log(items);
-    for(let i = 0; i < 6; i++) {
+xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        modify[0] = document.getElementsByClassName("Sat");
+        modify[1] = document.getElementsByClassName("Sun");
+        modify[2] = document.getElementsByClassName("Mon");
+        modify[3] = document.getElementsByClassName("Tus");
+        modify[4] = document.getElementsByClassName("Wed");
+        modify[5] = document.getElementsByClassName("Thurs");
+        console.log(modify);
+        var items = JSON.parse(xhttp.responseText);
+        console.log(items);
+        for (let i = 0; i < 6; i++) {
             modify[i][0].innerHTML = items[i].firstTime;
             modify[i][1].innerHTML = items[i].SecondTime;
             modify[i][2].innerHTML = items[i].ThirdTime;
@@ -491,6 +491,6 @@ xhttp.onreadystatechange = function() {
             modify[i][4].innerHTML = items[i].FifthTime;
             modify[i][5].innerHTML = items[i].SixthTime;
         }
-  }
+    }
 };
 xhttp.send();
