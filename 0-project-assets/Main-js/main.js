@@ -470,12 +470,22 @@ if (window.XMLHttpRequest) {
 } else {
     xhttp = new ActiveXObject();
 }
-xhttp.open("GET", "data.txt");
+xhttp.open("GET", "data.json");
 xhttp.onreadystatechange = function() {
   if (xhttp.readyState == 4 && xhttp.status == 200) {
-    var modify = document.getElementsByTagName("small");
-    for(i in modify) {
-    modify[i].innerHTML = xhttp.responseText;
+    var modify = document.getElementById("divCalendar").getElementsByTagName("small");
+    var items = JSON.parse(xhttp.responseText);
+    console.log(modify);
+    console.log(items);
+    for(var i = 0; i < 6; i++) {
+        for(var i = 0; i < 6; i++) {
+            modify[0].innerHTML = items[0].firstTime;
+            modify[1].innerHTML = items[0].firstTime;
+            modify[2].innerHTML = items[0].firstTime;
+            modify[3].innerHTML = items[0].firstTime;
+            modify[4].innerHTML = items[0].firstTime;
+            modify[5].innerHTML = items[0].firstTime;
+        }
     }
   }
 };
