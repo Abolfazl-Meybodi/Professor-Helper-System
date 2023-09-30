@@ -9,3 +9,14 @@
 این کلیت پروژه بود و برای دیدن جزِئیات بیشتر کد های هر بخش در دایرکتوری مربوطه گذاشته شده است. 
 
 این پروژه فقط دارای بخش فرانت اند می باشد، و در آینده نزدیک قصد آن را دارم تا بخش هایی از این پروژه را به کمک کد های بیشتر پویا کنم!
+
+
+It was a university project that I was working on as a thesis in 2018. The basis of this system was to build a portal so that professors can do the work related to university affairs better!
+
+This portal, like any other portal, uses a login form to authenticate and enter the relevant section. As soon as the teacher enters, he will see his respective classes during the week! And on the right side of the screen, he sees a vertical menu that includes the list of classes, the list of students and the section related to attendance and absence.
+
+In the top menu of the page, you can see your professor's ID, the current academic year, and the corresponding semester, whether the semester is odd or even. And at the end of that section, he can see the messages he has.
+
+This was the whole project and to see more details, the code of each part is placed in the corresponding directory.
+
+This project only has the front-end part, and in the near future I plan to make parts of this project dynamic with more code!
